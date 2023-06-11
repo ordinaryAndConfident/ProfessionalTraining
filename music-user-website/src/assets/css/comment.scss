@@ -1,0 +1,96 @@
+@import "var.scss";
+@import "global.scss";
+
+/*评论*/
+.comment {
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid $color-black;
+  }
+
+  .comment-msg {
+    display: flex;
+
+    .comment-img {
+      width: 55px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .comment-input {
+      margin-left: 10px;
+      flex: 1;
+    }
+  }
+
+  .sub-btn {
+    margin-top: 10px;
+    margin-left: 90%;
+  }
+}
+
+/*热门评论*/
+.popular {
+  width: 100%;
+
+  >li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    display: flex;
+
+    .popular-img {
+      width: 55px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .popular-msg {
+      padding: 0 20px;
+      flex: 1;
+
+      li {
+        width: 100%;
+        list-style: none;
+      }
+
+      .name {
+        font-size: .8rem;
+        font-weight: 600;
+        margin-right: 5px;
+        color: #0c73c2;
+        cursor: pointer;
+
+        .content {
+          font-size: .8rem;
+          color: #333;
+        }
+      }
+
+      .time {
+        font-size: 0.6rem;
+        color: #999;
+        margin-top: 24px;
+      }
+
+    }
+
+    .up {
+      width: auto;
+      line-height: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.icon {
+  @include icon(1em);
+}
