@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.dao.ConsumerMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaoyu.pojo.Consumer">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="nick_name" property="nickName" jdbcType="VARCHAR"/>
+        <result column="avatar" property="avatar" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="TINYINT"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="birthday" property="birthday" jdbcType="DATE"/>
+        <result column="introduction" property="introduction" jdbcType="VARCHAR"/>
+        <result column="location" property="location" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="DATE"/>
+        <result column="update_time" property="updateTime" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,account,password,nick_name,avatar,sex,phone,email,birthday,introduction,location,create_time,update_time
+    </sql>
+
+    <insert id="insert" parameterType="com.xiaoyu.pojo.Consumer">
+        insert into consumer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            account,password,
+            <if test="nickName != null">
+                nick_name,
+            </if>
+            <if test="avatar != null">
+                avatar,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="birthday != null">
+                birthday,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+            <if test="location != null">
+                location,
+            </if>
+            create_time,update_time
+    </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+             #{email},MD5(123456),
+            <if test="nickName != null">
+                #{nickName},
+            </if>
+            <if test="avatar != null">
+                #{avatar},
+            </if>
+            <if test="sex != null">
+                #{sex},
+            </if>
+            <if test="phone != null">
+                #{phone},
+            </if>
+            <if test="email != null">
+                #{email},
+            </if>
+            <if test="birthday != null">
+                #{birthday},
+            </if>
+            <if test="introduction != null">
+                #{introduction},
+            </if>
+            <if test="location != null">
+                #{location},
+            </if>
+            now(),now()
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.xiaoyu.pojo.Consumer">
+        update consumer
+        <set>
+            <if test="password != null">
+                password = MD5(#{password}),
+            </if>
+            <if test="nickName != null">
+                nick_name = #{nickName},
+            </if>
+            <if test="avatar != null">
+                avatar = #{avatar},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="email != null">
+                email = #{email},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction},
+            </if>
+            <if test="location != null">
+                location = #{location},
+            </if>
+            update_time = now()
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select  <include refid="Base_Column_List"/>
+        from consumer
+    </select>
+
+    <delete id="deleteConsumer" parameterType="java.lang.Integer">
+        delete from consumer where id = #{id}
+    </delete>
+
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from consumer where id = #{id}
+    </select>
+
+    <update id="changePassWordByAccount" parameterType="com.xiaoyu.pojo.Consumer">
+        update consumer
+        <set>
+            <if test="password != null">
+                password = MD5(#{password}),
+            </if>
+            update_time = now()
+        </set>
+        where account = #{account}
+    </update>
+
+    <select id="selectByAccount" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from consumer where account = #{account}
+    </select>
+
+    <select id="selectConsumerByEmail" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from consumer where email = #{email}
+    </select>
+
+    <select id="login" resultMap="BaseResultMap" parameterType="com.xiaoyu.pojo.Consumer">
+        select <include refid="Base_Column_List"/>
+        from consumer
+        where account = #{account} and password = MD5(#{password})
+    </select>
+</mapper>

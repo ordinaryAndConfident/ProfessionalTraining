@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoyu.dao.CommentMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaoyu.pojo.Comment">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="consumer_id" property="consumerId" jdbcType="INTEGER"/>
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="song_id" property="songId" jdbcType="INTEGER"/>
+        <result column="song_list_id" property="songListId" jdbcType="INTEGER"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="up" property="up" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="DATE"/>
+        <result column="update_time" property="updateTime" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,consumer_id,`type`,song_id,song_list_id,content,up,create_time,update_time
+    </sql>
+
+    <insert id="insert" parameterType="com.xiaoyu.pojo.Comment">
+        insert into comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="consumerId != null">
+                consumer_id,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="songId != null">
+                song_id,
+            </if>
+            <if test="songListId != null">
+                song_list_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="up != null">
+                up,
+            </if>
+            create_time,update_time
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="consumerId != null">
+                #{consumerId},
+            </if>
+            <if test="type != null">
+                #{type},
+            </if>
+            <if test="songId != null">
+                #{songId},
+            </if>
+            <if test="songListId != null">
+                #{songListId},
+            </if>
+            <if test="content != null">
+                #{content},
+            </if>
+            <if test="up != null">
+                #{up},
+            </if>
+            now(),now()
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.xiaoyu.pojo.Comment">
+        update comment
+        <set>
+            <if test="consumerId != null">
+                consumer_id = #{consumerId},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="songId != null">
+                song_id = #{songId},
+            </if>
+            <if test="songListId != null">
+                song_list_id = #{songListId},
+            </if>
+            <if test="content != null">
+                content = #{content},
+            </if>
+            <if test="up != null">
+                up = #{up},
+            </if>
+            update_time = now()
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from comment where id = #{id}
+    </delete>
+
+    <select id="getAllComment" resultMap="BaseResultMap">
+        select  <include refid="Base_Column_List"/>
+        from comment
+    </select>
+
+    <select id="getCommentById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select <include refid="Base_Column_List"/>
+        from comment
+        where id = #{id}
+    </select>
+
+    <select id="getSongCommentById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select <include refid="Base_Column_List"/>
+        from comment
+        where song_id = #{songId}
+    </select>
+
+    <select id="getSongListCommentById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select <include refid="Base_Column_List"/>
+        from comment
+        where song_list_id = #{songListId}
+    </select>
+</mapper>

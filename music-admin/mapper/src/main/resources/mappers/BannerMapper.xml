@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.dao.BannerMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaoyu.pojo.Banner">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="is_show" property="isShow" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="DATE"/>
+        <result column="update_time" property="updateTime" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,url,is_show,create_time,update_time
+    </sql>
+
+    <insert id="insert" parameterType="com.xiaoyu.pojo.Banner">
+        insert into banner
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="isShow != null">
+                is_show,
+            </if>
+            create_time,update_time
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="url != null">
+                #{url},
+            </if>
+            <if test="isShow != null">
+                #{isShow},
+            </if>
+            now(),now()
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.xiaoyu.pojo.Banner">
+        update banner
+        <set>
+            <if test="url != null">
+                url = #{url},
+            </if>
+            <if test="isShow != null">
+                is_show = #{isShow},
+            </if>
+            update_time = now()
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="delBanner" parameterType="java.lang.Integer">
+        delete from banner where id = #{id}
+    </delete>
+
+    <select id="getAllBanner" resultMap="BaseResultMap">
+        select  <include refid="Base_Column_List"/>
+        from banner
+    </select>
+
+    <select id="getTop4Banner" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/>
+        from banner where is_show != 0
+        order by create_time desc
+        limit 0,4
+    </select>
+
+    <select id="getBannerById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select <include refid="Base_Column_List"/>
+        from banner
+        where id = #{id}
+    </select>
+
+</mapper>

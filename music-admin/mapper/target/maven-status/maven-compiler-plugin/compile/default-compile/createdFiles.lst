@@ -1,0 +1,10 @@
+com\xiaoyu\dao\ConsumerMapper.class
+com\xiaoyu\dao\ListSongMapper.class
+com\xiaoyu\dao\SongMapper.class
+com\xiaoyu\dao\AdminMapper.class
+com\xiaoyu\dao\RankMapper.class
+com\xiaoyu\dao\FavoriteMapper.class
+com\xiaoyu\dao\SingerMapper.class
+com\xiaoyu\dao\SongListMapper.class
+com\xiaoyu\general\BaseDao.class
+com\xiaoyu\dao\CommentMapper.class

@@ -1,0 +1,11 @@
+com\xiaoyu\MusicWebsiteApplication.class
+com\xiaoyu\controller\ConsumerController.class
+com\xiaoyu\controller\SongController.class
+com\xiaoyu\controller\AdminController.class
+com\xiaoyu\config\CorsConfig.class
+com\xiaoyu\controller\FavoriteController.class
+com\xiaoyu\controller\SongListController.class
+com\xiaoyu\controller\CommentController.class
+com\xiaoyu\controller\ListSongController.class
+com\xiaoyu\controller\RankController.class
+com\xiaoyu\controller\SingerController.class

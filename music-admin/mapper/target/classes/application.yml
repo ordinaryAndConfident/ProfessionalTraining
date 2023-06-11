@@ -1,0 +1,41 @@
+###########################
+# SpringBoot 启动端口号
+###########################
+server:
+  port: 9527
+
+###########################
+# SpringBoot 数据源配置
+###########################
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      ## 如果后端项目部署的服务器和数据库的服务器不在同一台主机上，则需要修改 localhost 为数据库服务器的IP地址
+      url: jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: root
+      initialSize: 3
+      maxActive: 10
+      minIdle: 0
+      maxWait: 60000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 50MB
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.xiaoyu.pojo
+
+###########################
+# 日志文件配置
+###########################
+logging:
+  config: classpath:logback-spring.xml
