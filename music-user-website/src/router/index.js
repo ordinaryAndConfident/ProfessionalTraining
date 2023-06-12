@@ -15,57 +15,57 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/pages/Home.vue')
+      component: () => import('@/views/Home.vue')
     },
     {
       path: '/song-list',
       name: 'song-list',
-      component: () => import('@/pages/SongList.vue')
+      component: () => import('@/views/SongList.vue')
     },
     {
       path: '/my-music',
       name: 'my-music',
-      component: () => import('@/pages/MyMusic.vue')
+      component: () => import('@/views/MyMusic.vue')
     },
     {
       path: '/singer-list',
       name: 'singer-list',
-      component: () => import('@/pages/SingerList.vue')
+      component: () => import('@/views/SingerList.vue')
     },
     {
       path: '/search',
       name: 'search',
-      component: () => import('@/pages/Search.vue')
+      component: () => import('@/views/Search.vue')
     },
     {
       path: '/lyric',
       name: 'lyric',
-      component: () => import('@/pages/Lyric.vue')
+      component: () => import('@/views/Lyric.vue')
     },
     {
       path: '/login-in',
       name: 'login',
-      component: () => import('@/pages/Login.vue')
+      component: () => import('@/views/Login.vue')
     },
     {
       path: '/sign-up',
       name: 'register',
-      component: () => import('@/pages/Register.vue')
+      component: () => import('@/views/Register.vue')
     },
     {
       path: '/person-info',
       name: 'person-info',
-      component: () => import('@/pages/PersonInfo.vue')
+      component: () => import('@/views/PersonInfo.vue')
     },
     {
       path: '/singer-album/:id',
       name: 'singer-album',
-      component: () => import('@/pages/SingerAlbum.vue')
+      component: () => import('@/views/SingerAlbum.vue')
     },
     {
       path: '/song-list-album/:id',
       name: 'song-list-album',
-      component: () => import('@/pages/SongListAlbum.vue')
+      component: () => import('@/views/SongListAlbum.vue')
     }
   ]
 })
