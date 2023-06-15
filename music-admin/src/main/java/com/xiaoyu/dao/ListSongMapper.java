@@ -6,12 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: TODO
- * @date 2022/10/18 22:27
- */
+
 
 @Repository
 public interface ListSongMapper extends BaseDao<ListSong> {

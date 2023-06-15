@@ -14,12 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: TODO
- * @date 2022/10/18 21:55
- */
+
 @RestController
 @RequestMapping("/song")
 public class SongController {

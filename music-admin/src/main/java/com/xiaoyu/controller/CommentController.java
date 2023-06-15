@@ -9,12 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: TODO
- * @date 2022/11/15 16:18
- */
 @RestController
 @RequestMapping("/comment")
 public class CommentController {

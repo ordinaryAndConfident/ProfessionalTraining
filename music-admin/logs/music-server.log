@@ -1,96 +1,103 @@
-2023-06-12 11:02:18,330 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 55] Starting MusicWebsiteApplication using Java 1.8.0_332 on LAPTOP-IAJLHQSB with PID 19448 (E:\软工实训\ProfessionalTraining\music-admin\target\classes started by LY in E:\软工实训\ProfessionalTraining\music-admin)
-2023-06-12 11:02:18,338 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [SpringApplication.java : 640] No active profile set, falling back to 1 default profile: "default"
-2023-06-12 11:02:18,995 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xiaoyu]' package. Please check your configuration.
-2023-06-12 11:02:19,318 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 9527 (http)
-2023-06-12 11:02:19,326 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2023-06-12 11:02:19,326 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2023-06-12 11:02:19,400 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2023-06-12 11:02:19,401 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1020 ms
-2023-06-12 11:02:19,457 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2023-06-12 11:02:19,673 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 985] {dataSource-1} inited
-2023-06-12 11:02:20,415 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2023-06-12 11:02:20,416 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2023-06-12 11:02:20,416 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2023-06-12 11:02:20,417 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 83] Clear EntityHelper entityTableMap cache.
-2023-06-12 11:02:20,502 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 9527 (http) with context path ''
-2023-06-12 11:02:20,510 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 61] Started MusicWebsiteApplication in 2.653 seconds (JVM running for 3.38)
-2023-06-12 11:03:37,322 [INFO] [http-nio-9527-exec-6] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-12 11:03:37,322 [INFO] [http-nio-9527-exec-6] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2023-06-12 11:03:37,323 [INFO] [http-nio-9527-exec-6] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 0 ms
-2023-06-12 11:03:37,385 [WARN] [http-nio-9527-exec-6] com.alibaba.druid.pool.DruidAbstractDataSource [DruidAbstractDataSource.java : 1489] discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false, version : 1.2.2, lastPacketReceivedIdleMillis : 77704
-2023-06-12 11:03:37,385 [WARN] [http-nio-9527-exec-4] com.alibaba.druid.pool.DruidAbstractDataSource [DruidAbstractDataSource.java : 1489] discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false, version : 1.2.2, lastPacketReceivedIdleMillis : 77707
-2023-06-12 11:03:37,385 [WARN] [http-nio-9527-exec-1] com.alibaba.druid.pool.DruidAbstractDataSource [DruidAbstractDataSource.java : 1489] discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false, version : 1.2.2, lastPacketReceivedIdleMillis : 77712
-2023-06-12 11:03:37,393 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
-2023-06-12 11:03:37,394 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==>  Preparing: select id,url,is_show,create_time,update_time from banner where is_show != 0 order by create_time desc limit 0,4
-2023-06-12 11:03:37,397 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
-2023-06-12 11:03:37,412 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:03:37,412 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:03:37,412 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:03:37,429 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] <==      Total: 0
-2023-06-12 11:03:37,431 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
-2023-06-12 11:03:37,434 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
-2023-06-12 11:03:38,676 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
-2023-06-12 11:03:38,677 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:03:38,681 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
-2023-06-12 11:03:39,217 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
-2023-06-12 11:03:39,217 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:03:39,219 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
-2023-06-12 11:05:16,571 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 55] Starting MusicWebsiteApplication using Java 1.8.0_332 on LAPTOP-IAJLHQSB with PID 17188 (E:\软工实训\ProfessionalTraining\music-admin\target\classes started by LY in E:\软工实训\ProfessionalTraining\music-admin)
-2023-06-12 11:05:16,575 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [SpringApplication.java : 640] No active profile set, falling back to 1 default profile: "default"
-2023-06-12 11:05:17,172 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xiaoyu]' package. Please check your configuration.
-2023-06-12 11:05:17,454 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 9527 (http)
-2023-06-12 11:05:17,460 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2023-06-12 11:05:17,461 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2023-06-12 11:05:17,526 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2023-06-12 11:05:17,526 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 905 ms
-2023-06-12 11:05:17,584 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2023-06-12 11:05:17,764 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 985] {dataSource-1} inited
-2023-06-12 11:05:18,473 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2023-06-12 11:05:18,473 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2023-06-12 11:05:18,474 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2023-06-12 11:05:18,474 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 83] Clear EntityHelper entityTableMap cache.
-2023-06-12 11:05:18,555 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 9527 (http) with context path ''
-2023-06-12 11:05:18,563 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 61] Started MusicWebsiteApplication in 2.41 seconds (JVM running for 3.109)
-2023-06-12 11:05:21,786 [INFO] [http-nio-9527-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-12 11:05:21,786 [INFO] [http-nio-9527-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2023-06-12 11:05:21,787 [INFO] [http-nio-9527-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2023-06-12 11:05:21,826 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
-2023-06-12 11:05:21,841 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:05:21,858 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
-2023-06-12 11:10:53,961 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 55] Starting MusicWebsiteApplication using Java 11.0.12 on LAPTOP-IAJLHQSB with PID 23424 (E:\软工实训\ProfessionalTraining\music-admin\target\classes started by LY in E:\软工实训\ProfessionalTraining\music-admin)
-2023-06-12 11:10:53,965 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [SpringApplication.java : 640] No active profile set, falling back to 1 default profile: "default"
-2023-06-12 11:10:54,471 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xiaoyu]' package. Please check your configuration.
-2023-06-12 11:10:54,732 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 9527 (http)
-2023-06-12 11:10:54,739 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2023-06-12 11:10:54,739 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2023-06-12 11:10:54,802 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2023-06-12 11:10:54,803 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 805 ms
-2023-06-12 11:10:54,864 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2023-06-12 11:10:55,036 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 985] {dataSource-1} inited
-2023-06-12 11:10:55,718 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2023-06-12 11:10:55,719 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2023-06-12 11:10:55,719 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2023-06-12 11:10:55,719 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 83] Clear EntityHelper entityTableMap cache.
-2023-06-12 11:10:55,799 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 9527 (http) with context path ''
-2023-06-12 11:10:55,807 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 61] Started MusicWebsiteApplication in 2.217 seconds (JVM running for 2.907)
-2023-06-12 11:12:26,450 [INFO] [http-nio-9527-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-12 11:12:26,451 [INFO] [http-nio-9527-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2023-06-12 11:12:26,452 [INFO] [http-nio-9527-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2023-06-12 11:12:26,502 [WARN] [http-nio-9527-exec-1] com.alibaba.druid.pool.DruidAbstractDataSource [DruidAbstractDataSource.java : 1489] discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false, version : 1.2.2, lastPacketReceivedIdleMillis : 91462
-2023-06-12 11:12:26,504 [WARN] [http-nio-9527-exec-1] com.alibaba.druid.pool.DruidAbstractDataSource [DruidAbstractDataSource.java : 1489] discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false, version : 1.2.2, lastPacketReceivedIdleMillis : 91476
-2023-06-12 11:12:26,505 [WARN] [http-nio-9527-exec-1] com.alibaba.druid.pool.DruidAbstractDataSource [DruidAbstractDataSource.java : 1489] discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false, version : 1.2.2, lastPacketReceivedIdleMillis : 91482
-2023-06-12 11:12:26,510 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
-2023-06-12 11:12:26,526 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
-2023-06-12 11:12:26,545 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
-2023-06-12 11:12:27,311 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer where sex = ?
-2023-06-12 11:12:27,312 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==> Parameters: 3(Integer)
-2023-06-12 11:12:27,314 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] <==      Total: 1
-2023-06-12 11:12:27,626 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer where sex = ?
-2023-06-12 11:12:27,626 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
-2023-06-12 11:12:27,627 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] <==      Total: 1
-2023-06-12 11:12:28,348 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer where sex = ?
-2023-06-12 11:12:28,348 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==> Parameters: 0(Integer)
-2023-06-12 11:12:28,350 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] <==      Total: 3
-2023-06-12 11:12:28,752 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer where sex = ?
-2023-06-12 11:12:28,753 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] ==> Parameters: 3(Integer)
-2023-06-12 11:12:28,755 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.SingerMapper.selectSingerBySex [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:25,429 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 55] Starting MusicWebsiteApplication using Java 17.0.5 on LAPTOP-EKSQCURR with PID 25212 (E:\qianfeng\cqlg\music-admin\target\classes started by jiaolin in E:\qianfeng\cqlg\music-admin)
+2023-06-15 09:33:25,438 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [SpringApplication.java : 640] No active profile set, falling back to 1 default profile: "default"
+2023-06-15 09:33:26,082 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xiaoyu]' package. Please check your configuration.
+2023-06-15 09:33:26,469 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 9527 (http)
+2023-06-15 09:33:26,478 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-06-15 09:33:26,478 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2023-06-15 09:33:26,549 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-06-15 09:33:26,550 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1060 ms
+2023-06-15 09:33:26,615 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2023-06-15 09:33:26,894 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 985] {dataSource-1} inited
+2023-06-15 09:33:27,735 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2023-06-15 09:33:27,736 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2023-06-15 09:33:27,736 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2023-06-15 09:33:27,737 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 83] Clear EntityHelper entityTableMap cache.
+2023-06-15 09:33:27,877 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 9527 (http) with context path ''
+2023-06-15 09:33:27,889 [INFO] [main] com.xiaoyu.MusicWebsiteApplication [StartupInfoLogger.java : 61] Started MusicWebsiteApplication in 2.996 seconds (JVM running for 3.754)
+2023-06-15 09:33:40,859 [INFO] [http-nio-9527-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-15 09:33:40,861 [INFO] [http-nio-9527-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
+2023-06-15 09:33:40,862 [INFO] [http-nio-9527-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
+2023-06-15 09:33:40,923 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
+2023-06-15 09:33:40,923 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==>  Preparing: select id,url,is_show,create_time,update_time from banner where is_show != 0 order by create_time desc limit 0,4
+2023-06-15 09:33:40,923 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
+2023-06-15 09:33:40,956 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:40,956 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:40,956 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:40,988 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:40,990 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
+2023-06-15 09:33:40,994 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
+2023-06-15 09:33:44,767 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.SongMapper.selectSongBySingerId [BaseJdbcLogger.java : 137] ==>  Preparing: select id,singer_id,name,introduction,create_time,update_time,picture,url,lyric from song where singer_id = ?
+2023-06-15 09:33:44,769 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.SongMapper.selectSongBySingerId [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
+2023-06-15 09:33:44,771 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.CommentMapper.getSongCommentById [BaseJdbcLogger.java : 137] ==>  Preparing: select id,consumer_id,`type`,song_id,song_list_id,content,up,create_time,update_time from comment where song_id = ?
+2023-06-15 09:33:44,772 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.CommentMapper.getSongCommentById [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
+2023-06-15 09:33:44,778 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.SongMapper.selectSongBySingerId [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:44,779 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.CommentMapper.getSongCommentById [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:47,026 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
+2023-06-15 09:33:47,026 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
+2023-06-15 09:33:47,027 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:47,027 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==>  Preparing: select id,url,is_show,create_time,update_time from banner where is_show != 0 order by create_time desc limit 0,4
+2023-06-15 09:33:47,029 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:47,030 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:47,033 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:47,034 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
+2023-06-15 09:33:47,034 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
+2023-06-15 09:33:48,971 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.CommentMapper.getSongListCommentById [BaseJdbcLogger.java : 137] ==>  Preparing: select id,consumer_id,`type`,song_id,song_list_id,content,up,create_time,update_time from comment where song_list_id = ?
+2023-06-15 09:33:48,972 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.CommentMapper.getSongListCommentById [BaseJdbcLogger.java : 137] ==> Parameters: -1(Integer)
+2023-06-15 09:33:48,974 [DEBUG] [http-nio-9527-exec-8] com.xiaoyu.dao.RankMapper.rankNumBySongListId [BaseJdbcLogger.java : 137] ==>  Preparing: select coalesce (count(id),0) as score from ranks where song_list_id = ?
+2023-06-15 09:33:48,974 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SongMapper.selectSongBySongListId [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT id,singer_id,name,introduction,create_time,update_time,picture,url,lyric FROM song WHERE id IN ( SELECT song_id FROM song_list sl, list_song ls WHERE sl.id = ls.song_list_id AND song_list_id = ? )
+2023-06-15 09:33:48,974 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.CommentMapper.getSongListCommentById [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:48,975 [DEBUG] [http-nio-9527-exec-8] com.xiaoyu.dao.RankMapper.rankNumBySongListId [BaseJdbcLogger.java : 137] ==> Parameters: 8(Integer)
+2023-06-15 09:33:48,975 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SongMapper.selectSongBySongListId [BaseJdbcLogger.java : 137] ==> Parameters: 8(Integer)
+2023-06-15 09:33:48,976 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectById [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list where id = ?
+2023-06-15 09:33:48,977 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectById [BaseJdbcLogger.java : 137] ==> Parameters: 8(Integer)
+2023-06-15 09:33:48,981 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectById [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:48,986 [DEBUG] [http-nio-9527-exec-8] com.xiaoyu.dao.RankMapper.rankNumBySongListId [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:48,987 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.SongMapper.selectSongBySongListId [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:52,317 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
+2023-06-15 09:33:52,317 [DEBUG] [http-nio-9527-exec-7] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
+2023-06-15 09:33:52,318 [DEBUG] [http-nio-9527-exec-7] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:52,317 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:52,325 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==>  Preparing: select id,url,is_show,create_time,update_time from banner where is_show != 0 order by create_time desc limit 0,4
+2023-06-15 09:33:52,326 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:52,329 [DEBUG] [http-nio-9527-exec-7] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
+2023-06-15 09:33:52,329 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
+2023-06-15 09:33:52,339 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:53,277 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.CommentMapper.getSongListCommentById [BaseJdbcLogger.java : 137] ==>  Preparing: select id,consumer_id,`type`,song_id,song_list_id,content,up,create_time,update_time from comment where song_list_id = ?
+2023-06-15 09:33:53,281 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.CommentMapper.getSongListCommentById [BaseJdbcLogger.java : 137] ==> Parameters: -1(Integer)
+2023-06-15 09:33:53,282 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.RankMapper.rankNumBySongListId [BaseJdbcLogger.java : 137] ==>  Preparing: select coalesce (count(id),0) as score from ranks where song_list_id = ?
+2023-06-15 09:33:53,282 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SongMapper.selectSongBySongListId [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT id,singer_id,name,introduction,create_time,update_time,picture,url,lyric FROM song WHERE id IN ( SELECT song_id FROM song_list sl, list_song ls WHERE sl.id = ls.song_list_id AND song_list_id = ? )
+2023-06-15 09:33:53,282 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.RankMapper.rankNumBySongListId [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
+2023-06-15 09:33:53,282 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SongMapper.selectSongBySongListId [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
+2023-06-15 09:33:53,284 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.CommentMapper.getSongListCommentById [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:53,285 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.RankMapper.rankNumBySongListId [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:53,286 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.RankMapper.scoreSumBySongListId [BaseJdbcLogger.java : 137] ==>  Preparing: select coalesce (sum(score),0) as score from ranks where song_list_id = ?
+2023-06-15 09:33:53,286 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.SongMapper.selectSongBySongListId [BaseJdbcLogger.java : 137] <==      Total: 2
+2023-06-15 09:33:53,286 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.RankMapper.scoreSumBySongListId [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
+2023-06-15 09:33:53,286 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.SongListMapper.selectById [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list where id = ?
+2023-06-15 09:33:53,287 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.SongListMapper.selectById [BaseJdbcLogger.java : 137] ==> Parameters: 1(Integer)
+2023-06-15 09:33:53,290 [DEBUG] [http-nio-9527-exec-9] com.xiaoyu.dao.SongListMapper.selectById [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:53,293 [DEBUG] [http-nio-9527-exec-3] com.xiaoyu.dao.RankMapper.scoreSumBySongListId [BaseJdbcLogger.java : 137] <==      Total: 1
+2023-06-15 09:33:59,614 [DEBUG] [http-nio-9527-exec-8] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
+2023-06-15 09:33:59,614 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
+2023-06-15 09:33:59,616 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:59,616 [DEBUG] [http-nio-9527-exec-8] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:59,618 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==>  Preparing: select id,url,is_show,create_time,update_time from banner where is_show != 0 order by create_time desc limit 0,4
+2023-06-15 09:33:59,618 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:33:59,620 [DEBUG] [http-nio-9527-exec-8] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5
+2023-06-15 09:33:59,621 [DEBUG] [http-nio-9527-exec-1] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:33:59,622 [DEBUG] [http-nio-9527-exec-6] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
+2023-06-15 09:34:03,452 [DEBUG] [http-nio-9527-exec-7] com.xiaoyu.dao.SongMapper.selectSongBySingerId [BaseJdbcLogger.java : 137] ==>  Preparing: select id,singer_id,name,introduction,create_time,update_time,picture,url,lyric from song where singer_id = ?
+2023-06-15 09:34:03,453 [DEBUG] [http-nio-9527-exec-7] com.xiaoyu.dao.SongMapper.selectSongBySingerId [BaseJdbcLogger.java : 137] ==> Parameters: 4(Integer)
+2023-06-15 09:34:03,459 [DEBUG] [http-nio-9527-exec-7] com.xiaoyu.dao.SongMapper.selectSongBySingerId [BaseJdbcLogger.java : 137] <==      Total: 3
+2023-06-15 09:34:03,466 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.CommentMapper.getSongCommentById [BaseJdbcLogger.java : 137] ==>  Preparing: select id,consumer_id,`type`,song_id,song_list_id,content,up,create_time,update_time from comment where song_id = ?
+2023-06-15 09:34:03,466 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.CommentMapper.getSongCommentById [BaseJdbcLogger.java : 137] ==> Parameters: 4(Integer)
+2023-06-15 09:34:03,471 [DEBUG] [http-nio-9527-exec-4] com.xiaoyu.dao.CommentMapper.getSongCommentById [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:34:07,473 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,title,pic,introduction,style from song_list
+2023-06-15 09:34:07,473 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==>  Preparing: select id,name,sex,location,introduction,avatar,birthday from singer
+2023-06-15 09:34:07,473 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:34:07,478 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:34:07,479 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==>  Preparing: select id,url,is_show,create_time,update_time from banner where is_show != 0 order by create_time desc limit 0,4
+2023-06-15 09:34:07,479 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] ==> Parameters: 
+2023-06-15 09:34:07,480 [DEBUG] [http-nio-9527-exec-10] com.xiaoyu.dao.SongListMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 10
+2023-06-15 09:34:07,480 [DEBUG] [http-nio-9527-exec-2] com.xiaoyu.dao.BannerMapper.getTop4Banner [BaseJdbcLogger.java : 137] <==      Total: 0
+2023-06-15 09:34:07,480 [DEBUG] [http-nio-9527-exec-5] com.xiaoyu.dao.SingerMapper.selectAll [BaseJdbcLogger.java : 137] <==      Total: 5

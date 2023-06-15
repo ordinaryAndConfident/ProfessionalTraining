@@ -8,12 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: TODO
- * @date 2022/10/18 21:55
- */
+
 @RestController
 @RequestMapping("/user")
 public class AdminController {

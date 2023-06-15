@@ -7,12 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: 歌手
- * @date 2022/10/20 20:45
- */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

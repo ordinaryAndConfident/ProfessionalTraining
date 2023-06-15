@@ -9,12 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: TODO
- * @date 2022/11/18 15:33
- */
+
 @RestController
 @RequestMapping("/favorite")
 public class FavoriteController {
@@ -26,9 +21,9 @@ public class FavoriteController {
     public ResultVO insert(Favorite favorite){
         boolean insert = favoriteService.insert(favorite);
         if(insert){
-            return new ResultVO(ResStatus.OK,"收藏成功",insert);
+            return new ResultVO(ResStatus.OK,"收藏成功!",insert);
         }else {
-            return new ResultVO(ResStatus.NO,"收藏失败",null);
+            return new ResultVO(ResStatus.NO,"收藏失败!",null);
         }
     }
 

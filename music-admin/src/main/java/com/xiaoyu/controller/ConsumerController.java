@@ -14,12 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: 前端用户
- * @date 2022/11/6 14:42
- */
+
 @RestController
 @RequestMapping("/consumer")
 public class ConsumerController {
@@ -94,12 +89,13 @@ public class ConsumerController {
     public ResultVO update(Consumer consumer) {
         if (consumer.getPassword() == null || consumer.getPassword().equals("")){
             consumer.setPassword(null);
+
         }
         boolean i = consumerService.update(consumer);
         if (i) {
-            return new ResultVO(ResStatus.OK, "更新成功!", i);
+            return new ResultVO(ResStatus.OK, "更新成功", i);
         } else {
-            return new ResultVO(ResStatus.NO, "更新失败!", null);
+            return new ResultVO(ResStatus.NO, "更新失败", null);
         }
     }
 
@@ -128,7 +124,7 @@ public class ConsumerController {
         Consumer consumer = consumerService.selectById(id);
         consumer.setPassword("");
         if (consumer != null) {
-            return new ResultVO(ResStatus.OK, "查询成功", consumer);
+            return new ResultVO(ResStatus.OK, "查询成功！", consumer);
         } else {
             return new ResultVO(ResStatus.NO, "查询失败!", null);
         }

@@ -9,12 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: 歌单controller
- * @date 2022/11/5 21:51
- */
+
 @RestController
 @RequestMapping("/listSong")
 public class ListSongController {

@@ -5,12 +5,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: 解决跨域问题、定位各种文件地址
- * @date 2022/10/20 10:53
- */
+
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 

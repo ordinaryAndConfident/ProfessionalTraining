@@ -10,12 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: TODO
- * @date 2022/11/15 10:58
- */
+
 @RestController
 @RequestMapping("/rank")
 public class RankController {

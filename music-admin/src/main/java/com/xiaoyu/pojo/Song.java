@@ -6,12 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: 歌曲
- * @date 2022/11/2 17:38
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

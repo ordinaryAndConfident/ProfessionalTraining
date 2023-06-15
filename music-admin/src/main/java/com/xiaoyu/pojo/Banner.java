@@ -6,12 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-/**
- * @author YuSir
- * @version 1.0
- * @description: 前端首页轮播图
- * @date 2023/5/13 13:36
- */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
